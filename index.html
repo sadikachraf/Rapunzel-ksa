@@ -1767,7 +1767,8 @@ function submitOrder(){
   var notes=sessionStorage.getItem('bonus_applied')?'BONUS: Fast shipping 24h + 14-day guarantee':'';
   fetch('https://script.google.com/macros/s/AKfycbye-NBe0MAgt0hc2uIJ6-4sZs9TmwX951TLuLud-LDLumkbrGKtiVFD6WCGbWcGrsNxhA/exec',{
     method:'POST',
-    headers:{'Content-Type':'application/json'},
+    mode:'no-cors',
+    headers:{'Content-Type':'text/plain;charset=utf-8'},
     body:JSON.stringify({
       OrderDate:new Date().toISOString(),
       country:'SA',
